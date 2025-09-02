@@ -9,7 +9,7 @@ num2=input("escribe otro numero")
 residuo= num1 % num2
 print(num1, "%", num2, "=", residuo)
 
-EJERCICIO3
+EJERCICIO 3
 segundos=input("escribe una cantidad de segundos")
 horas= segundos // 3600
 minutos= (segundos % 3600) // 60
