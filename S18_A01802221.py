@@ -14,14 +14,15 @@ reprobados = [alumnos[i] for i in range(len(calificaciones)) if calificaciones[i
 print("Alumnos reprobados:", reprobados)
 
 #ejercicio 3
-articulos = ["Leche","Pan","Huevos","Manzanas","Arroz"]
-comprado = [True,False,False,True,False]
-for i in range(len(articulos)):
-    if not comprado[i]:
-        r = input("¿Ya compraste "+articulos[i]+"? (s/n): ")
-        if r.lower()=="s": comprado[i]=True
-for i in range(len(articulos)):
-    print(articulos[i], "Comprado" if comprado[i] else "Pendiente")
+art = ["Leche", "Pan", "Huevos", "Manzanas"]
+comp = [True, False, False, True]
+for i in range(len(art)):
+    if comp[i] == False:
+        r = input("¿Ya compraste " + art[i] + "? ")
+        if r == "si":
+            comp[i] = True
+for i in range(len(art)):
+    print(art[i], "Comprado" if comp[i] else "Pendiente")
 
 #ejercicio 4
 numeros = [45,12,89,33,7,56,21]
@@ -48,8 +49,7 @@ usuarios = ["Juan","Ana","Pedro","Lucía","Carlos"]
 while True:
     nuevo_usuario = input("Nuevo usuario: ")
     if nuevo_usuario not in usuarios:
-        usuarios += [nuevo_usuario]
-        break
+        usuarios = [nuevo_usuario]
     print("Ese nombre ya existe")
 print("Usuarios:", usuarios)
 
